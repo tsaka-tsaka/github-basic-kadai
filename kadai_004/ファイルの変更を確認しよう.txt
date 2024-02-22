@@ -1,0 +1,62 @@
+tsaka@Sakaguchi MINGW64 ~/Desktop
+$ mkdir git_challenge
+
+tsaka@Sakaguchi MINGW64 ~/Desktop
+$ cd git_challenge
+
+tsaka@Sakaguchi MINGW64 ~/Desktop/git_challenge
+$ git init
+Initialized empty Git repository in C:/Users/tsaka/Desktop/git_challenge/.git/
+
+tsaka@Sakaguchi MINGW64 ~/Desktop/git_challenge (main)
+$ echo Hello, world! >>hello_world.txt
+
+tsaka@Sakaguchi MINGW64 ~/Desktop/git_challenge (main)
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+tsaka@Sakaguchi MINGW64 ~/Desktop/git_challenge (main)
+$ git commit -m 'hello_world.txtを追加'
+[main (root-commit) 9ed5401] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+
+tsaka@Sakaguchi MINGW64 ~/Desktop/git_challenge (main)
+$ git log
+commit 9ed54011cb43fd3c31b51548ae403041606e565c (HEAD -> main)
+Author: tsaka-tsaka <t.sakaguchi0107@gmail.com>
+Date:   Thu Feb 22 22:02:10 2024 +0900
+
+    hello_world.txtを追加
+
+tsaka@Sakaguchi MINGW64 ~/Desktop/git_challenge (main)
+$ echo 'こんちは、世界! >> hello_world.txt
+> ^C
+
+tsaka@Sakaguchi MINGW64 ~/Desktop/git_challenge (main)
+$ echo 'こんちは、世界!' >> hello_world.txt
+
+tsaka@Sakaguchi MINGW64 ~/Desktop/git_challenge (main)
+$ git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+tsaka@Sakaguchi MINGW64 ~/Desktop/git_challenge (main)
+$ git commit -m '日本語を追記'
+[main 25f6255] 日本語を追記
+ 1 file changed, 1 insertion(+)
+
+tsaka@Sakaguchi MINGW64 ~/Desktop/git_challenge (main)
+$ git log
+commit 25f62554872db95f984a95118de934014bd1ff41 (HEAD -> main)
+Author: tsaka-tsaka <t.sakaguchi0107@gmail.com>
+Date:   Thu Feb 22 22:04:34 2024 +0900
+
+    日本語を追記
+
+commit 9ed54011cb43fd3c31b51548ae403041606e565c
+Author: tsaka-tsaka <t.sakaguchi0107@gmail.com>
+Date:   Thu Feb 22 22:02:10 2024 +0900
+
+    hello_world.txtを追加
+Hello, world!
+こんちは、世界!
